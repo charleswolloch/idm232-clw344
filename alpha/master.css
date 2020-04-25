@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "roboto_regular";
+    src: url(fonts/roboto-regular-webfont.woff) format("woff"),
+        url(fonts/roboto-regular-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "roboto_italic";
+    src: url(fonts/roboto-italic-webfont.woff) format("woff"),
+        url(fonts/roboto-italic-webfont.woff2) format("woff2");
+}
+
+
+@font-face {
+    font-family: "roboto_bold";
+    src: url(fonts/roboto-bold-webfont.woff) format("woff"),
+        url(fonts/roboto-bold-webfont.woff2) format("woff2");
+}
+
+
+body {
+    margin: auto;
+    background: #cce2fa;
+}
+
+div {
+    text-align: center;
+    margin: auto 3rem;
+    width: auto;
+}
+
+.resize {
+    width: 70%;
+}
+
+h1 {
+    font-family: "roboto_bold";
+
+}
