@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "roboto_regular";
+    src: url(fonts/roboto-regular-webfont.woff) format("woff"),
+        url(fonts/roboto-regular-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "roboto_italic";
+    src: url(fonts/roboto-italic-webfont.woff) format("woff"),
+        url(fonts/roboto-italic-webfont.woff2) format("woff2");
+}
+
+
+@font-face {
+    font-family: "roboto_bold";
+    src: url(fonts/roboto-bold-webfont.woff) format("woff"),
+        url(fonts/roboto-bold-webfont.woff2) format("woff2");
+}
+
+
+body {
+    background: #FEFBED;
+}
+
+.logoresize {
+    width: 300px;
+
+}
+
+#recipe_search {
+    float: right;
+}
+
+.backbutton {
+    float: right;
+    width: 100px;
+
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    border-bottom: 10px solid #E40713;
+}
+
+footer {
+    border-top: 10px solid #E40713;
+
+}
+
+.recipe_gallery {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.tile {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    border: 2px solid black;
+    padding: .5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+
+
+.recipe_header {
+    margin: auto;
+}
+
+
+.ingredients_parent {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.step_parent {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.ing_img {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.step_img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+
+@media screen and (min-width: 700px) {
+
+    .recipe_gallery {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .ingredients_parent {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .step_parent {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1rem;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .recipe_gallery {
+        width: 1150px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+
+    .ingredients_parent {
+        width: 1150px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+
+    .step_parent {
+        width: 1150px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 1rem;
+
+    }
+}
+
+
+/*Floating Back-To-Top Button*/
+#myBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 13%;
+    left: 87%;
+    max-width: 60px;
+    width: 100%;
+    font-size: 12px;
+    border-color: transparent;
+    background-color: transparent;
+    padding: .5px;
+    border-radius: 4px;
+
+}
