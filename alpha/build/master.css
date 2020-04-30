@@ -20,6 +20,8 @@
 
 body {
     background: #FEFBED;
+    font-family: "roboto_regular";
+    font-size: 16px;
 }
 
 .logoresize {
@@ -37,9 +39,7 @@ body {
 
 }
 
-.searchIcon {
-    width: 50px;
-}
+
 
 a:visited {
     color: black;
@@ -75,20 +75,69 @@ footer {
 
 }
 
+.homeresize {
+    width: 300px;
+    height: 300px;
+}
+
 .tile {
-    display: flex;
     width: 300px;
     height: 300px;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid #E40713;
     padding: .5rem;
     margin: 1rem 0 2rem 0;
+    border-bottom: 60px solid #E40713;
+
+}
+
+.tile h3 {
+    position: relative;
+    bottom: 10px;
+    color: #FEFBED;
+    font-size: 1.1rem;
+}
+
+.tile h4 {
+    position: relative;
+    bottom: 30px;
+    color: #FEFBED;
+
 }
 
 
 
 .recipe_header {
     margin: auto;
+    padding: 1rem;
+
+}
+
+.recipe_header h1 {
+    padding-left: 1rem;
+    position: relative;
+    bottom: 140px;
+    background: #E40713;
+    color: #FEFBED;
+
+}
+
+.recipe_header h2 {
+    padding-left: 1rem;
+    position: relative;
+    bottom: 166px;
+    background: #E40713;
+    color: #FEFBED;
+
+}
+
+
+.recipe_header p {
+    padding-top: 1rem;
+    position: relative;
+    bottom: 150px;
+    margin: auto;
+    font-size: 1.2rem;
 }
 
 
@@ -97,6 +146,11 @@ footer {
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem;
+}
+
+.ingredients_child {
+    width: 300px;
 }
 
 
@@ -105,23 +159,38 @@ footer {
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem;
+
 }
 
 
 .ing_img {
-    width: 400px;
-    height: 300px;
-    border: 2px solid black;
+    width: 350px;
+    height: 260px;
 }
 
 .step_img {
-    width: 300px;
-    height: 300px;
-    border: 2px solid black;
+    width: 450px;
+    height: 260px;
 }
 
+.step_child {
+    max-width: 350px;
+}
+
+.headerimg {
+    width: 100%;
+    border: 2px solid #E40713;
+    border-bottom: 120px solid #E40713;
+
+}
 
 @media screen and (min-width: 700px) {
+
+    .recipe_header {
+        width: 650px;
+    }
+
 
     .recipe_gallery {
         display: flex;
@@ -150,6 +219,9 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+
+
+
 
     .recipe_gallery {
         width: 1150px;
