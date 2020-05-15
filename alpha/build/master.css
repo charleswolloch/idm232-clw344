@@ -104,7 +104,7 @@ footer {
     border: 2px solid #E40713;
     padding: .5rem;
     margin: 1rem 0 2rem 0;
-    border-bottom: 60px solid #E40713;
+    border-bottom: 100px solid #E40713;
 
 }
 
@@ -133,7 +133,7 @@ footer {
 
 .recipe_header {
     margin: auto;
-    padding: 1rem;
+    padding: 0 1rem;
 
 
 }
@@ -176,6 +176,7 @@ footer {
 
 .ingredients_child {
     width: 300px;
+
 }
 
 
@@ -200,6 +201,7 @@ footer {
 }
 
 .step_childtxt {
+    align-self: flex-start;
     max-width: 400px;
 }
 
@@ -303,4 +305,23 @@ footer {
     .step_child {
         max-width: 500px;
     }
+}
+
+/*Floating Back-To-Top Button*/
+#myBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 10%;
+    left: 85%;
+    max-width: 60px;
+    width: 100%;
+    font-size: 40px;
+    padding: .5px;
+    color: #E40713;
+    cursor: pointer;
+    border: 2.5px solid #E40713;
+    border-radius: 50px 50px 50px 50px;
+
+
 }
