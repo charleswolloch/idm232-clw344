@@ -45,26 +45,23 @@ if (!$result ) {
 
 
 
-    <div id="recipe_search">
-        <form action="">
-            <label for="search"></label>
-            <input type="search" id="recipeSearch" name="recipeSearch" placeholder="Search">
-            <button id="search" onclick="#">Go</button>
+    <div class="redback">
+        <form class="search-container">
+            <input type="text" id="search-bar" placeholder="Search">
+            <a href="#"><img class="search-icon" src="images/search-icon.png"></a>
         </form>
-
-
     </div>
+
     <br>
-    <form method="post">
-        <fieldset>
-            <legend>Filter</legend>
-            <label><input type="radio" name="radio"> All</label>
-            <label><input type="radio" name="radio"> Beef</label>
-            <label><input type="radio" name="radio"> Chicken</label>
-            <label><input type="radio" name="radio"> Pork</label>
-            <label><input type="radio" name="radio"> Fish</label>
-            <label><input type="radio" name="radio"> Vegetarian</label>
-        </fieldset>
+
+    <form class="filter-container">
+        <button type="button" class="button">All</button>
+        <button type="button" class="button">Beef</button>
+        <button type="button" class="button">Chicken</button>
+        <button type="button" class="button">Pork</button>
+        <button type="button" class="button">Fish</button>
+        <button type="button" class="button">Vegetarian</button>
+
     </form>
 
     <!-- Help Button -->
