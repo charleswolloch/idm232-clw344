@@ -48,7 +48,7 @@ if (!$result ) {
     <div class="redback">
         <form class="search-container">
             <input type="text" id="search-bar" placeholder="Search">
-            <a href="#"><img class="search-icon" src="images/search-icon.png"></a>
+            <a href="search.html"><img class="search-icon" src="images/search-icon.png"></a>
         </form>
     </div>
 

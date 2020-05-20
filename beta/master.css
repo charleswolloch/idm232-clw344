@@ -26,6 +26,7 @@ body {
 
 .logoresize {
     width: 260px;
+    cursor: pointer;
 
 }
 
@@ -381,4 +382,5 @@ input#search-bar {
     display: block;
     font-size: 16px;
     margin: .1rem;
+    cursor: pointer;
 }
