@@ -376,11 +376,12 @@ input#search-bar {
     /* Green */
     border: none;
     color: white;
-    padding: 8px 15px;
+    padding: 6px 7.5px;
     text-align: center;
     text-decoration: none;
     display: block;
     font-size: 16px;
     margin: .1rem;
     cursor: pointer;
+    border-radius: 15px;
 }
