@@ -67,7 +67,8 @@ if (!$result ) {
     <!-- Help Button -->
 
 
-    <a href="help.html"><button id="myBtn">?</button></a>
+    <a href="help.html"><button id="myBtn2">?</button></a>
+    <a href="#top"><button id="myBtn">⇪</button></a>
 
 
     <!-- gallery and tiles done w flex -->
@@ -117,6 +118,7 @@ if (!$result ) {
     <a href="recipe.html">Recipe</a>
     <a href="help.html">Help</a>
     <a href="search.html">Search Results</a>
+
 </footer>
 
 </html>

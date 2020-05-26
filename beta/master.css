@@ -308,13 +308,30 @@ footer {
     }
 }
 
-/*Floating Back-To-Top Button*/
+/*Floating Help Button*/
 #myBtn {
     position: fixed;
     bottom: 10px;
     float: right;
-    right: 10%;
-    left: 85%;
+    right: 4%;
+    max-width: 60px;
+    width: 100%;
+    font-size: 40px;
+    padding: .5px;
+    color: #E40713;
+    cursor: pointer;
+    border: 2.5px solid #E40713;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #FEFBED;
+
+}
+
+/*Floating Help Button*/
+#myBtn2 {
+    position: fixed;
+    bottom: 10px;
+    float: left;
+    left: 4%;
     max-width: 60px;
     width: 100%;
     font-size: 40px;
@@ -333,6 +350,7 @@ footer {
 
 .search-container {
     max-width: 216px;
+
 }
 
 input#search-bar {
@@ -361,6 +379,7 @@ input#search-bar {
 .redback {
     background: #E40713;
     width: 100%;
+
 
 }
 
