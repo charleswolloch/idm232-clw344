@@ -34,7 +34,7 @@ if (!$result ) {
 <!-- header -->
 <header>
     <!-- Logo -->
-    <a href="index.html" class="back">
+    <a href="index.php" class="back">
         <img src="images/JAC_logo.png" class="logoresize"></a>
     <!-- search -->
 
@@ -67,8 +67,8 @@ if (!$result ) {
     <!-- Help Button -->
 
 
-    <a href="help.html"><button id="myBtn">?</button></a>
-
+    <a href="help.html"><button id="myBtn2">?</button></a>
+    <a href="#top"><button id="myBtn">⇪</button></a>
 
     <!-- gallery and tiles done w flex -->
 
@@ -86,10 +86,18 @@ if (!$result ) {
 
 
         <div class="tile">
-            <a href="recipe.html"><img src="graphics/<?php echo $row['main_img']; ?>" class="homeresize">
+            <!-- <a href="recipe.php"> -->
+            <?php
+                $id = $row['id'];
+        
+                echo "<a href=\"recipe.php?id={$id}\">";
 
-                <h3><?php echo $row['title']; ?></h3>
-                <h4><?php echo $row['subtitle']; ?></h4>
+            ?>
+
+            <img src="graphics/<?php echo $row['main_img']; ?>" class="homeresize">
+
+            <h3><?php echo $row['title']; ?></h3>
+            <h4><?php echo $row['subtitle']; ?></h4>
             </a>
         </div>
 
@@ -112,11 +120,5 @@ if (!$result ) {
 
 </body>
 
-<footer>
-    <a href="index.html">Home</a>
-    <a href="recipe.html">Recipe</a>
-    <a href="help.html">Help</a>
-    <a href="search.html">Search Results</a>
-</footer>
 
 </html>

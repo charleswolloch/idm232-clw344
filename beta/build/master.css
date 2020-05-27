@@ -308,13 +308,12 @@ footer {
     }
 }
 
-/*Floating Back-To-Top Button*/
+/*Floating Help Button*/
 #myBtn {
     position: fixed;
     bottom: 10px;
     float: right;
-    right: 10%;
-    left: 85%;
+    right: 4%;
     max-width: 60px;
     width: 100%;
     font-size: 40px;
@@ -327,6 +326,23 @@ footer {
 
 }
 
+/*Floating Help Button*/
+#myBtn2 {
+    position: fixed;
+    bottom: 10px;
+    float: left;
+    left: 4%;
+    max-width: 60px;
+    width: 100%;
+    font-size: 40px;
+    padding: .5px;
+    color: #E40713;
+    cursor: pointer;
+    border: 2.5px solid #E40713;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #FEFBED;
+
+}
 
 
 /* added on 5/19/20 better search and filter css */
@@ -376,11 +392,12 @@ input#search-bar {
     /* Green */
     border: none;
     color: white;
-    padding: 8px 15px;
+    padding: 6px 7.5px;
     text-align: center;
     text-decoration: none;
     display: block;
     font-size: 16px;
     margin: .1rem;
     cursor: pointer;
+    border-radius: 15px;
 }
