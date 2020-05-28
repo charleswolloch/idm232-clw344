@@ -79,8 +79,9 @@ require 'include/db.php';
             $ingredStr = $row['all_ingredients'];
             // echo $ingredStr;
             
-            // Convert string intoan array
+            // Convert string into an array
             $ingredArray = explode("*", $ingredStr);
+            
             
             for($lp = 0; $lp < count($ingredArray); $lp++) {
                 $oneIngred = $ingredArray[$lp];
@@ -102,16 +103,45 @@ require 'include/db.php';
 
     <?php 
             $stepImgs = $row['step_imgs'];
-            // echo $stepImgs;
+            $allSteps = $row['all_steps'];
+            $allHeaders = $row['all_steps'];
+    
             
-            // Convert string intoan array
+            // Convert string into an array
+        // all step array has twice as much lines as all images array
             $stepImgsArray = explode("*", $stepImgs);
+    
+            $allStepsArray = explode("*", $allSteps);
+    
+            $allHeadersArray = explode("*", $allHeaders);
             
             
-            ?>
+            for($i = 0; $i < count($stepImgsArray); $i++){
+                $oneImg = $stepImgsArray[$i];
+                $oneStep = $allStepsArray[$i*2+1];
+                $oneHeader = $allHeadersArray[$i*2];
+               // echo $oneImg . "<br>";
+                echo "<div class=\"step_parent\">";
+                echo "<img src=\"graphics/" . $oneImg . "\" class=\"step_child step_img\">";
+                
+                echo "<div class=\"step_child step_childtxt\">";
+                
+                echo "<h4> $oneHeader </h4>";
+                echo "<p> $oneStep </p>";
+                
+                echo "</div>";
+                
+                echo "</div>";
+                
+    }
 
+
+    ?>
+
+    <!--
     <div class="step_parent">
-        <img src="images/1225_FPV_Pesto-Broccoli-Sandwich_18814_WEB_retina_feature.jpg" class="step_child step_img">
+        <img src="graphics/1225_FPV_Pesto-Broccoli-Sandwich_18814_WEB_retina_feature.jpg" class="step_child step_img">
+
         <div class="step_child step_childtxt">
             <h4> 1 Prepare the ingredients & season the tomato sauce:</h4>
             <p>Place an oven rack in the center of the oven, then preheat to 475°F. Wash and dry the fresh produce. Cut off and discard the bottom 1/2 inch of the <strong>broccoli</strong> stem; cut the broccoli into small pieces, keeping the florets intact. Peel and roughly chop the <strong>garlic.</strong> Halve the <strong>focaccia.</strong> Grate the <strong>asiago cheese</strong> on the large side of a box grater. Tear the <strong>mozzarella cheese</strong> into small pieces. In a bowl, combine the <strong>tomato sauce</strong> and <strong>Italian seasoning;</strong> season with salt and pepper to taste. </p>
@@ -121,7 +151,7 @@ require 'include/db.php';
     </div>
 
 
-
+-->
 
 
 </body>

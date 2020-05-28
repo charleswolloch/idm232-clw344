@@ -98,7 +98,7 @@ if (!$result ) {
 
             <h3><?php echo $row['title']; ?></h3>
             <h4><?php echo $row['subtitle']; ?></h4>
-            </a>
+            <?php echo "</a>" ?>
         </div>
 
 
