@@ -202,6 +202,7 @@ footer {
 }
 
 .step_childtxt {
+    margin: 0 auto;
     align-self: flex-start;
     max-width: 400px;
 }
