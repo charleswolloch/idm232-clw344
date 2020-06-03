@@ -1,9 +1,38 @@
 <?php
 // Step 1 Open a connection to DB
 require 'include/db.php';
-
-// Step 2 Perform a DB Table Query
 $table = 'recipes';
+
+// Get filter info if passed in URL
+$filter = $_GET['filter'];
+
+
+if(isset($_POST['submit'])) {
+    // echo "User Clicked Submit"; 
+
+    $search = $_POST['search'];
+    $query = "SELECT * FROM {$table} WHERE title LIKE '%{$search}%' OR subtitle LIKE '%{$search}%' ";
+    $result = mysqli_query($connection, $query);
+
+    if (!$result ) {
+    die ('Search query failed');
+}
+
+    
+    
+    
+} else if (isset($filter)) {
+
+    $query = "SELECT * FROM {$table} WHERE proteine LIKE '%{$filter}%'";
+    $result = mysqli_query($connection, $query);
+    
+    if (!$result ) {
+    die ('Filter query failed');
+}
+
+
+} else {
+    // Step 2 Perform a DB Table Query
 $query = "SELECT * FROM {$table}";
 $result = mysqli_query($connection, $query);
 
@@ -11,6 +40,9 @@ $result = mysqli_query($connection, $query);
 if (!$result ) {
     die ('Database query failed');
 }
+}
+
+
 
 ?>
 
@@ -46,21 +78,21 @@ if (!$result ) {
 
 
     <div class="redback">
-        <form class="search-container">
-            <input type="text" id="search-bar" placeholder="Search">
-            <a href="search.html"><img class="search-icon" src="images/search-icon.png"></a>
+        <form class="search-container" action="index.php" method="POST">
+            <input type="text" id="search-bar" placeholder="Search" name="search">
+            <button type="submit" name="submit" value="submit" class="search-icon">Submit</button>
         </form>
     </div>
 
     <br>
 
     <form class="filter-container">
-        <button type="button" class="button">All</button>
-        <button type="button" class="button">Beef</button>
-        <button type="button" class="button">Chicken</button>
-        <button type="button" class="button">Pork</button>
-        <button type="button" class="button">Fish</button>
-        <button type="button" class="button">Vegetarian</button>
+        <a href="index.php" class="filter"><button type="button" class="button">All</button></a>
+        <a href="index.php?filter=Beef" class="filter"><button type="button" class="button">Beef</button></a>
+        <a href="index.php?filter=Chicken" class="filter"><button type="button" class="button">Chicken</button></a>
+        <a href="index.php?filter=Pork" class="filter"><button type="button" class="button">Pork</button></a>
+        <a href="index.php?filter=Fish" class="filter"><button type="button" class="button">Fish</button></a>
+        <a href="index.php?filter=Vegitarian" class="filter"><button type="button" class="button">Vegitarian</button></a>
 
     </form>
 
@@ -71,6 +103,28 @@ if (!$result ) {
     <a href="#top"><button id="myBtn">⇪</button></a>
 
     <!-- gallery and tiles done w flex -->
+    <div class="allrecipe">
+        <?php 
+        if (isset($_POST['submit'])) {
+            if ($result->num_rows == 0) {
+                echo "<h2 class=\"allrecipe\">No Recipes Found</h2>";
+            } else {
+                echo "<h2 class=\"allrecipe\">Search Results:</h2>";
+            }
+            
+
+        } else if (isset($filter)) {
+            echo "<h2 class=\"allrecipe\">Filter Results:</h2>";
+            
+            
+        } else {
+        echo "<h2 class=\"allrecipe\">All Recipes</h2>";
+
+        }
+        
+        
+        ?>
+    </div>
 
     <div class="recipe_gallery">
         <!-- Tile is made of following: main img, title in h3, subtitle in h4 -->
